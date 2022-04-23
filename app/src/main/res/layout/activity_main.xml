@@ -51,6 +51,7 @@
             >
 
             <EditText
+                android:id="@+id/mEditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -63,6 +64,7 @@
                 />
 
             <TextView
+                android:id="@+id/mTvResult"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Ordered Amount = Tk.10000\nCash out Fee 1.85%  = Tk.185 \nTotal Amount = Tk.10185"
@@ -83,24 +85,28 @@
             android:weightSum="4"
             >
             <Button
+                android:id="@+id/btnPayment1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="bKash"
                 android:textAllCaps="false"/>
             <Button
+                android:id="@+id/btnPayment2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Nagad"
                 android:textAllCaps="false"/>
             <Button
+                android:id="@+id/btnPayment3"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Rocket"
                 android:textAllCaps="false"/>
             <Button
+                android:id="@+id/btnPayment4"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
