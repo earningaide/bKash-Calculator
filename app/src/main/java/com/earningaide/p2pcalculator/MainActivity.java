@@ -29,10 +29,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String sValue = mEditText.getText().toString();
-                float fValue = Float.parseFloat(sValue);
-                float fCost= fValue*0.0185f;
-                float fTotal = fValue+fCost;
-                mTvResult.setText("Ordered Amount = "+fValue+"\nCash out Fee 1.85% = "+fCost+" \nTotal Amount = "+fTotal);
+                if(sValue.isEmpty()){
+                    mTvResult.setText("Please Input Amount");
+                }else {
+                    float fValue = Float.parseFloat(sValue);
+                    float fCost = fValue * 0.0185f;
+                    float fTotal = fValue + fCost;
+                    mTvResult.setText("Ordered Amount = " + fValue + "\nCash out Fee 1.85% = " + fCost + " \nTotal Amount = " + fTotal);
+                }
             }
         });
         btnNagad2.setOnClickListener(new View.OnClickListener() {
