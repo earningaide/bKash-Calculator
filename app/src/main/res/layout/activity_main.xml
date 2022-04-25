@@ -28,97 +28,101 @@
 
     <View
         android:id="@+id/divider"
-        android:layout_below="@id/tagline"
         android:layout_width="match_parent"
         android:layout_height="5dp"
         android:background="?android:attr/listDivider" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:layout_margin="10dp"
-        android:layout_below="@id/divider"
-        android:orientation="horizontal"
-        android:weightSum="7">
+        android:padding="20dp"
+        android:background="@color/teal_200"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Result Below..."
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_marginTop="00dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="4"
-            android:orientation="vertical"
-            >
-
-            <EditText
-                android:id="@+id/mEditText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:inputType="numberDecimal"
-                android:hint="Enter amount Here"
-                android:textColor="@color/black"
-                />
-
-            <TextView
-                android:id="@+id/mTvResult"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Ordered Amount = Here\nCash out Fee %  = Here \nTotal Amount = Here"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:lineSpacingExtra="5dp"
-                android:textIsSelectable="true"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="3"
-            android:weightSum="4"
-            >
-            <Button
-                android:id="@+id/btnPayment1"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="bKash"
-                android:textAllCaps="false"/>
-            <Button
-                android:id="@+id/btnPayment2"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Nagad"
-                android:textAllCaps="false"/>
-            <Button
-                android:id="@+id/btnPayment3"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Rocket"
-                android:textAllCaps="false"/>
-            <Button
-                android:id="@+id/btnPayment4"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Other"
-                android:textAllCaps="false"/>
-        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textIsSelectable="true"
+            android:lineSpacingExtra="5sp"
+            android:text="Your Order Amount = Tk.10000 \nPayment Method FEE = TK.185\nTotal Amount to Pay = Tk.10185"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="Amount: "/>
+
+        <EditText
+            android:id="@+id/edtAmount"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="00.00"
+            android:textColor="@color/black"
+            android:ems="10"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="FEE: "/>
+
+        <EditText
+            android:id="@+id/edtPercent"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:hint="0.00"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="%"/>
+
+    </LinearLayout>
     <View
         android:id="@+id/divider2"
         android:layout_width="match_parent"
         android:layout_height="5dp"
         android:background="?android:attr/listDivider" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:textAllCaps="false"/>
+
+
+
+
+
+
 
 </LinearLayout>
