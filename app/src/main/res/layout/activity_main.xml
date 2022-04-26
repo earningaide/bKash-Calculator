@@ -34,19 +34,19 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="160dp"
         android:layout_margin="10dp"
-        android:padding="20dp"
+        android:paddingLeft="20dp"
         android:background="@color/teal_200"
         android:orientation="vertical">
+
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Result Below"
             android:gravity="left"
-            android:textSize="24sp"
+            android:textSize="28sp"
             android:textStyle="bold"/>
-
         <TextView
             android:id="@+id/tvResult"
             android:layout_width="match_parent"
@@ -57,6 +57,7 @@
             android:textIsSelectable="true"
             android:lineSpacingExtra="5sp"
             android:text="Your Order Amount = Tk.10000 \nTransection FEE = TK.185\n>> Total Amount = Tk.10185\nType Last 4 Digit After Payment."/>
+
     </LinearLayout>
 
     <LinearLayout
