@@ -43,7 +43,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Result Below"
+            android:textColor="#CDDC39"
+            android:text="Result Below..."
             android:gravity="left"
             android:textSize="28sp"
             android:textStyle="bold"/>
@@ -56,7 +57,7 @@
             android:textStyle="bold"
             android:textIsSelectable="true"
             android:lineSpacingExtra="5sp"
-            android:text="Your Order Amount = Tk.10000 \nTransection FEE = TK.185\n>> Total Amount = Tk.10185\nType Last 4 Digit After Payment."/>
+            android:text="Your Order Amount = \nTransection FEE % =  \n>> Total Amount =  \nType Last 4 Digit After Payment."/>
 
     </LinearLayout>
 
@@ -73,14 +74,15 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textSize="18sp"
+            android:textColor="@color/black"
             android:text="Amount: "/>
 
         <EditText
             android:id="@+id/edtAmount"
-            android:layout_width="150dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:hint="00.00"
-            android:textColor="@color/black"
+            android:textColor="#CDDC39"
             android:ems="10"
             android:layout_marginRight="10dp"
             android:textStyle="bold"
@@ -90,6 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
+            android:textColor="@color/black"
             android:textSize="16sp"
             android:text="FEE: "/>
 
@@ -97,6 +100,8 @@
             android:id="@+id/edtPercent"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:textColor="#CDDC39"
+            android:textStyle="bold"
             android:hint="0.00"
             android:ems="10"
             android:inputType="numberDecimal" />
@@ -112,6 +117,7 @@
         android:id="@+id/divider2"
         android:layout_width="match_parent"
         android:layout_height="5dp"
+        android:layout_marginBottom="20dp"
         android:background="?android:attr/listDivider" />
 
     <Button
