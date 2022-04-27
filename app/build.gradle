@@ -9,6 +9,7 @@ android {
         applicationId "com.earningaide.p2pcalculator"
         minSdk 24
         targetSdk 31
+        //change version code when update
         versionCode 1
         versionName "1.0"
 
