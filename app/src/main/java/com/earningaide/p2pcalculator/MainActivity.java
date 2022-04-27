@@ -13,11 +13,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView tvResult; EditText edtAmount, edtPercent; Button btnCalculate;
     Float fAmount, fPercent, fCost, fTotal;
     String inputAmount,inputPercent;
+    AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +37,17 @@ public class MainActivity extends AppCompatActivity {
         btnCalculate = findViewById(R.id.btnCalculate);
 
         edtPercent.setText("1.85");
+
+        //ads-------------------------------
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         //On Click Event----------------------
         btnCalculate.setOnClickListener(new View.OnClickListener() {
