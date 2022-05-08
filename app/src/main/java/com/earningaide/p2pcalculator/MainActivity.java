@@ -21,7 +21,7 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tvResult; EditText edtAmount, edtPercent; Button btnCalculate;
+    TextView tvResult, tvCopy; EditText edtAmount, edtPercent; Button btnCalculate ;
     Float fAmount, fPercent, fCost, fTotal;
     String inputAmount,inputPercent;
     AdView mAdView;
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         edtAmount = findViewById(R.id.edtAmount);
         edtPercent = findViewById(R.id.edtPercent);
         btnCalculate = findViewById(R.id.btnCalculate);
+        tvCopy = findViewById(R.id.tvCopy);
 
         edtPercent.setText("1.85");
 
@@ -78,8 +79,9 @@ public class MainActivity extends AppCompatActivity {
                                     fTotal = fAmount+fCost;
 
                                     // Showing Data-------------------------------------
-                                    tvResult.setText("Your Ordered Amount = Tk."+fAmount+"\nTransection Fee "+fPercent+"% = Tk."+fCost+"\n>> Total Amount = Tk."+fTotal+"\nType Last 4 Digit After Payment.");
-                                    edtAmount.setText(""+fAmount);
+                                    tvResult.setText("Ordered Amount = Tk."+fAmount+"\nWithdrawal FEE "+fPercent+"% = Tk."+fCost+"\n\n>> Total Amount = Tk."+fTotal+"\nType Last 4 Digit After Payment.");
+                                    edtAmount.setText("");
+                                    tvCopy.setText("Text Copied.");
 
                                     // SharedPreferences
                                     SharedPreferences sharedPreferences = getSharedPreferences("spStore", Context.MODE_PRIVATE);
@@ -94,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                                     ClipboardManager clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                                     ClipData clipData = ClipData.newPlainText("mText",tvResult.getText().toString());
                                     clipboardManager.setPrimaryClip(clipData);
-                                    Toast.makeText(MainActivity.this,"Text Copied",Toast.LENGTH_LONG).show();
+                                    Toast.makeText(MainActivity.this,"Text Copied Successfully",Toast.LENGTH_LONG).show();
                         }
             }
         });

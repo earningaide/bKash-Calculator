@@ -34,20 +34,36 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="170dp"
         android:layout_margin="10dp"
         android:paddingLeft="20dp"
         android:background="@color/teal_200"
         android:orientation="vertical">
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#CDDC39"
-            android:text="Result Below..."
-            android:gravity="left"
-            android:textSize="28sp"
-            android:textStyle="bold"/>
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#CDDC39"
+                android:text="Result Below..."
+                android:gravity="left"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvCopy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textColor="#FFEB3B"
+                android:gravity="left"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
         <TextView
             android:id="@+id/tvResult"
             android:layout_width="match_parent"
@@ -57,7 +73,8 @@
             android:textStyle="bold"
             android:textIsSelectable="true"
             android:lineSpacingExtra="5sp"
-            android:text="Your Order Amount = \nTransection FEE % =  \n>> Total Amount =  \nType Last 4 Digit After Payment."/>
+            android:text="Ordered Amount = \nWithdrawal FEE % = \n\n>> Total Amount = \nType Last 4 Digit After Payment."/>
+
 
     </LinearLayout>
 
@@ -117,7 +134,7 @@
         android:id="@+id/divider2"
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:background="?android:attr/listDivider" />
 
     <Button
@@ -125,11 +142,12 @@
         android:layout_width="144dp"
         android:layout_height="62dp"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:textSize="18sp"
         android:textStyle="bold"
         android:text="Calculate"
         android:textAllCaps="false" />
+
 
  <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
